@@ -1,0 +1,174 @@
+:root {
+    --grey: grey;
+    --white: #ffffff;
+    --lightgrey:#353a40;
+    --greyTone:#55595c;
+    --lightblue:#2482d4;
+    --greenShade:#43925a;
+    --blueShade:#9ab4d7;
+    --redShade:red;
+}
+
+@font-face
+{
+    font-family: myFirstFont;
+    src: url(../assets/fonts/Charm-Regular.ttf);
+}
+.arrangement
+{
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 1px solid var(--grey);
+    padding: 0px;
+}
+ul,.subCards,.firstCard
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+ul{
+    color: var(--grey);
+}
+ul>li:hover
+{
+    color: var(--lightblue);
+}
+.arrangement >p
+{
+    color: var(--grey);
+}
+
+.arrangement div>button
+{
+    color: var(--grey);
+    height: 30px;
+    background-color: var(--white);
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.arrangement div>img
+{
+    height: 34%;
+    width: 19%;
+    margin-right: 8%;
+}
+.arrangement>h1
+{
+    margin: 0px;
+    font-weight: 100;
+}
+
+/* Long Card Css */
+
+.longCard
+{
+    display: flex;
+    background-color: var(--lightgrey);
+    padding: 1%;
+}
+.child_text>h1
+{
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0px;
+    font-family: myFirstFont;
+}
+.child_text>h6
+{
+    font-weight: 100;
+    font-size: 15px;
+    margin: 25px 0px 25px 0px;
+}
+.child_text
+{
+    color: var(--white);
+    width: 50%;
+}
+
+/* Small Sub Card */
+.subCards
+{
+    border-bottom: 1px solid var(--grey);
+}
+.firstCard
+{
+    height: 10%;
+    border: 1px solid var(--grey);
+    margin:2%;
+}
+.thumbnail
+{
+    background-color: var(--greyTone);
+    width: 40%;
+    text-align: center;
+}
+.thumbnail>p
+{
+    margin-top:60%;
+    color: white;
+    font-weight:300;
+}
+.info1 >p,h1, .info2 > p,h1
+{
+   margin: 4px;
+}
+.info1>h4, .info2>h4
+{
+    margin-bottom: 6px;
+    color: var(--lightblue);
+}
+.info1>h4:hover, .info2>h4:hover, footer :last-child:hover
+{
+    color: var(--redShade);
+}
+.info1, .info2
+{
+   margin: 4%;
+} 
+.info1 :first-child
+{
+    color:var(--lightblue);
+    font-size: 15px;
+    font-weight: 600;
+}
+.info2 :first-child
+{
+    font-size: 15px;
+    font-weight: 600;
+    color:var(--greenShade);
+}
+
+/* footer card css */
+
+footer :first-child
+{
+    color: var(--grey);
+    text-align: center;
+}
+
+footer :last-child
+{
+    color: var(--lightblue);
+    font-size: 15px;
+    text-align: center;
+    font-weight: 1000;
+    margin: 1px;
+}
+
+@media screen and (max-width: 601px) {
+    ul,.subCards,.firstCard
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .thumbnail
+    {
+        width: 100%;
+    }
+    .thumbnail>p
+    {
+        margin: 10%;
+    }
+}
