@@ -24,6 +24,7 @@
 ul,.subCards,.firstCard
 {
     display: flex;
+    padding: 0px;
     justify-content: space-evenly;
 }
 ul{
@@ -105,7 +106,9 @@ ul>li:hover
 }
 .thumbnail>p
 {
-    margin-top:60%;
+    /* margin-top:60%; */
+    position: relative;
+    top:4rem;
     color: white;
     font-weight:300;
 }
@@ -157,12 +160,20 @@ footer :last-child
 }
 
 @media screen and (max-width: 601px) {
-    ul,.subCards,.firstCard
+    .subCards,.firstCard
     {
-        display: flex;
         flex-direction: column;
     }
 
+    ul{
+        justify-content: space-between;
+        overflow: scroll;
+        width: 100%;
+    } 
+    li
+    {
+         margin:1%;
+    }
     .thumbnail
     {
         width: 100%;
@@ -170,5 +181,6 @@ footer :last-child
     .thumbnail>p
     {
         margin: 10%;
+        position: static;
     }
 }
